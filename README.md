@@ -6,3 +6,4 @@ MergeProof is allowed to read and write only:
 
 - `envs/prod/payments-api/**`
 - `helm/payments-api/**`
+- `terraform/payments-api/**`
