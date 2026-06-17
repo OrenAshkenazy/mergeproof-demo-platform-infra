@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payment-refund-worker
+  namespace: payments
+  labels:
+    app.kubernetes.io/name: payments-api
+    app.kubernetes.io/component: refund-worker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: refund-worker
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/component: refund-worker
+    spec:
+      containers:
+        - name: refund-worker
+          image: ghcr.io/orenashkenazy/mergeproof-demo-payments-api:demo
+          command: ["python", "-m", "app.workers.refund_worker"]
+          env:
+            - name: WORKER_QUEUE
+              value: refunds
+
