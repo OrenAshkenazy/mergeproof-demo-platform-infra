@@ -2,5 +2,8 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: payments-api-runtime-config
+  namespace: payments
+  labels:
+    app.kubernetes.io/name: payments-api
 data:
   CHARGEBACK_PROVIDER_URL: "<set CHARGEBACK_PROVIDER_URL for payments-api via platform-config>"
