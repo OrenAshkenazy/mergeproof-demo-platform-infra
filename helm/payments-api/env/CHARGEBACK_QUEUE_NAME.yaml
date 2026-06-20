@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: payments-api-runtime-config
 data:
-  CHARGEBACK_QUEUE_NAME: "<set CHARGEBACK_QUEUE_NAME for payments-api via platform-config>"
+  CHARGEBACK_QUEUE_NAME: "chargebacks-intake"
