@@ -16,3 +16,4 @@ env:
   WORKER_QUEUE: refunds
   REFUND_PROVIDER_URL: https://refunds.provider.internal
   REFUND_QUEUE_NAME: refunds-intake
+  CHARGEBACK_PROVIDER_URL: https://chargebacks.provider.internal

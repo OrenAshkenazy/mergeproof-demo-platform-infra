@@ -36,3 +36,4 @@ metadata:
 data:
   LOG_LEVEL: info
   WORKER_QUEUE: refunds
+  CHARGEBACK_PROVIDER_URL: https://chargebacks.provider.internal

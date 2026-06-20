@@ -3,4 +3,5 @@ kind: ConfigMap
 metadata:
   name: payments-api-chargeback-provider-url
 data:
-  CHARGEBACK_PROVIDER_URL: "<set CHARGEBACK_PROVIDER_URL for payments-api via platform-config>"
+  # Default value for non-prod/local use. Override via helm/payments-api/values.yaml or env-specific runtime ConfigMap.
+  CHARGEBACK_PROVIDER_URL: "https://chargebacks.provider.internal"
