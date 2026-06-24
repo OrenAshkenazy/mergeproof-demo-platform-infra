@@ -1,0 +1,4 @@
+workers:
+  settlement_worker:
+    enabled: true
+    service: payments-api
