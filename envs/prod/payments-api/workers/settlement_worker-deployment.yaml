@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payments-api-settlement_worker
+  labels:
+    app: payments-api
+    component: settlement_worker
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+        - name: settlement_worker
+          image: payments-api:latest
+          command: ["python", "-m", "app.workers.settlement_worker"]
