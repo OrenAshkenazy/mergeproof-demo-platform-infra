@@ -1,0 +1,4 @@
+workers:
+  dispute_notify_worker:
+    enabled: true
+    service: payments-api
