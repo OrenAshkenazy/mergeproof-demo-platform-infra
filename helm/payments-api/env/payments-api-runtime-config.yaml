@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: payments-api-runtime-config
+data:
+  DISPUTE_NOTIFY_TOPIC: "dispute-notifications"
+  PAYOUTS_PAGE_SIZE: "25"
+  PAYOUT_BATCH_SIZE: "50"
+  PAYOUT_EVENTS_QUEUE: "payout-events"
