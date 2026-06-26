@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payments-api-dispute_worker
+  labels:
+    app: payments-api
+    component: dispute_worker
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+        - name: dispute_worker
+          image: payments-api:latest
+          command: ["python", "-m", "app.workers.dispute_worker"]
