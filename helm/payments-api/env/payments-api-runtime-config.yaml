@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: payments-api-runtime-config
+data:
+  DISPUTE_NOTIFY_TOPIC: "dispute-notifications"
+  DISPUTE_PAGE_SIZE: "20"
+  REFUND_BATCH_SIZE: "25"
+  REFUND_EVENTS_QUEUE: "refund-events"
+  SETTLEMENT_REGION: "<required: set via platform-config>"
