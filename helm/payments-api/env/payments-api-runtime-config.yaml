@@ -3,6 +3,7 @@ kind: ConfigMap
 metadata:
   name: payments-api-runtime-config
 data:
+  CHARGEBACK_PROVIDER_URL: "<required: set via platform-config>"
   DISPUTE_NOTIFY_TOPIC: "dispute-notifications"
   DISPUTE_PAGE_SIZE: "20"
   REFUND_BATCH_SIZE: "25"
