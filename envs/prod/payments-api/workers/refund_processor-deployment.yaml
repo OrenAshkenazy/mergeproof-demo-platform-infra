@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payments-api-refund_processor
+  labels:
+    app: payments-api
+    component: refund_processor
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+        - name: refund_processor
+          image: payments-api:latest
+          command: ["python", "-m", "app.workers.refund_processor"]
+          # Runtime env is injected from the service-level aggregate ConfigMap +
+          # ExternalSecret (managed by MergeProof's aggregate_env_wiring). Names are
+          # static, so no per-variable coordination is needed.
+          envFrom:
+            - configMapRef:
+                name: payments-api-runtime-config
+            - secretRef:
+                name: payments-api-runtime-secrets

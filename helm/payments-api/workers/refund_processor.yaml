@@ -1,0 +1,4 @@
+workers:
+  refund_processor:
+    enabled: true
+    service: payments-api
