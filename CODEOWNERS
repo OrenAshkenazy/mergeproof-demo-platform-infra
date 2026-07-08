@@ -1,0 +1,7 @@
+# Default owner for the complete repository
+* @platform-team 
+
+# MergeProof writable demo scope
+/envs/prod/payments-api/** @platform-team 
+/helm/payments-api/** @platform-team 
+/terraform/payments-api/** @platform-team 
